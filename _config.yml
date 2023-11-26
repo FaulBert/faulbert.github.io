@@ -1,0 +1,25 @@
+title: Nazhard
+email: 
+description: >- # 
+                  Everything ok if you can do it. Just do it!
+baseurl: ""
+url: "https://nazhard.github.io"
+twitter_username: Handirz
+github_username:  nazhard
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
