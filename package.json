@@ -16,5 +16,6 @@
   "devDependencies": {
     "@unocss/reset": "^0.58.5",
     "unocss": "^0.58.5"
-  }
+  },
+  "packageManager": "^pnpm@8.15.2"
 }
