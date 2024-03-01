@@ -1,0 +1,29 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const links = [
+  { href: '/blog', text: 'blog', icon: 'paper' },
+  { href: '/projects', text: 'projects', icon: 'code-bracket-solid' },
+]
+---
+
+<nav class="kill">
+  <ul
+    p="t2 b1"
+    overflow="x-scroll y-hidden"
+    whitespace-nowrap
+    no-scrollbar
+  >
+    {links.map(({icon, text, href}) => (
+      <li w-fit inline-block mx-1 p1.5 px-2 rounded bg-zinc-8>
+        <a no-underline inline-flex items-baseline href={href}>
+          <Icon
+            name={icon}
+            class="self-center w-5 h-5 mx-1"
+          />
+          <span>{text.toUpperCase()}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>

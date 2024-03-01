@@ -1,0 +1,36 @@
+---
+import BaseLayout from './base.astro'
+import Footer from '@/components/Footer.astro'
+
+const { title, description, footer, header } = Astro.props.frontmatter || Astro.props
+---
+
+<!doctype html>
+<BaseLayout
+  title={title}
+  description={description}
+  className="bg-black text-gray-3 text-15px">
+  <div class="max-w-[648px] h-fit inset-0 m-auto px-5 py-10 bg-black/50">
+    <main>
+      <slot />
+    </main>
+    <Footer
+      display={ footer == 'no' ? 'hidden' : 'block' }
+    />
+  </div>
+</BaseLayout>
+
+<style is:global>
+h1, h2 {
+  line-height: 1.375;
+  margin: 15px 0 20px 0;
+}
+p {
+  line-height: 1.6;
+  margin: 15px 0 15px 0;
+}
+a {
+  text-decoration: underline #0072eb 2.5px;
+  text-underline-offset: 7px;
+}
+</style>

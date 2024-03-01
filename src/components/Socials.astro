@@ -1,0 +1,17 @@
+---
+import { Icon } from 'astro-icon/components'
+import { _links } from '@/data'
+---
+
+{_links.map(({ name, url }) => (
+  <a
+    href={url}
+    target="_blank"
+    mx-2 inline-block
+  >
+    <Icon
+      name={'socials/' + name.toLowerCase() + '-outline'}
+      class="w-9 h-9 text-white"
+    />
+  </a>
+))}

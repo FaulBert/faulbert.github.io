@@ -1,0 +1,30 @@
+---
+import Layout from '@/layouts/default.astro'
+import Button from '@/components/ButtonLinks.astro'
+import { _author } from '@/data'
+---
+
+<Layout
+  title=''
+  description=''
+>
+  <main>
+    <section grid grid-cols-2 mb-5>
+      <img
+        src={_author.avatar}
+        w-40 h-40 rounded-10
+        md:w-50 md:h-50 md:ml-10
+      />
+      <div>
+        <h1 text-5xl>Nazan</h1>
+        <p text-gray-4 italic>
+          A Cute Young Guy with Simple Dreams
+        </p>
+      </div>
+    </section>
+    <Button
+      link='/'
+      text='Nah, i have no idea what i should added here'
+    />
+  </main>
+</Layout>

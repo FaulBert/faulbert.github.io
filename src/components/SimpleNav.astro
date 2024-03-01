@@ -1,0 +1,40 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const links = [
+//  { href: '/', icon: '' },
+//  { href: '/about', icon: '' },
+ { href: '/blog', icon: 'paper' },
+ { href: '/projects', icon: 'code-bracket-solid' },
+// { href: '/links', icon: '' },
+]
+---
+
+<div
+  bottom-2
+  fixed
+  inset="x-13 md:x-70"
+  bg="white/30"
+  backdrop-blur-sm
+  rounded-md
+>
+  <nav class="kill">
+    <ul
+      p="t2 b1"
+      overflow="x-scroll y-hidden"
+      whitespace-nowrap
+      no-scrollbar
+    >
+      {links.map(({icon, href}) => (
+        <li w-fit inline-block mx-1 p1.5 px-2 rounded bg-zinc-8>
+          <a no-underline href={href}>
+            <Icon
+              name={icon}
+              class="w-7 h-7"
+            />
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,10 @@
+---
+const { props, text, link } = Astro.props
+---
+
+<button
+  bg-stone-7 py-2 px-5 text-lg my-5 mx-2 rounded-2
+  ...props
+>
+  { link ? <a class='no-underline' href={link}> {text} </a> : {text} }
+</button>

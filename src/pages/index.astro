@@ -1,0 +1,62 @@
+---
+import Layout from '@/layouts/default.astro'
+import Socials from '@/components/Socials.astro'
+// import Navigation from '@/components/Nav.astro'
+import { _author } from '@/data'
+---
+
+<Layout
+  title="I'm Nazhard - A Anime"
+  description="Nazhard Personal Website"
+>
+  <section c="white/70" md:pt-2vh md:pt-10vh>
+    <img
+      h-auto w-40 rounded-10 float-right
+      md:w-45 md:mr-15
+      outline="~ zinc-900"
+      src={_author.avatar}
+      alt="Nazhard profile picture"
+    />
+    <h1 text-4xl pt-20 pb-2 font-extrabold>
+      Hello!<br md:hidden /> I'm Nazan.
+    </h1>
+    <p my-2 font-bold>
+      A &#123; Full-Stack Dev, Student, and Weeb &#125;
+    </p>
+
+    {/* About me */}
+    <p>
+      I'm a self-taught programmer & hobbyist developer, weeb, student, and normal young person.
+      I'm like any other normal person. I live, eat, and drink. 
+      But most of all, I love watching Anime and Programming
+    </p>
+
+    <p>
+      I'm currently studying in middle school and like other normal students, I'm not very smart.
+      I program just to make tools for myself. I also use stacks that I think are nice and cool, well I mean, that I love!
+    </p>
+  </section>
+  
+  <section my-5>
+    <!-- <p text-lg font-bold mb-3>Navigation</p> -->
+    <!-- <Navigation /> -->
+  </section>
+
+  {/* Socials Link */}
+  <section my-5>
+    <p text-lg font-bold mb-5>Socials</p>
+    <p> Below are my places on the internet </p>
+    <Socials />
+  </section>
+
+  {/* recent work */}
+
+  {/* Tech Stack */}
+  <section mb-5>
+    <p text-lg font-bold mb-5>More</p>
+    <ul list-disc list-inside>
+      <li><b>Languages {">"}</b> JS/TS, Go, Zig </li>
+      <li><b>Web Frameworks {">"}</b> Astro, Remix, SvelteKit</li>
+    </ul>
+  </section>
+</Layout>

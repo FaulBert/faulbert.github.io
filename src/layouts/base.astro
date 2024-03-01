@@ -1,0 +1,13 @@
+---
+import Head from '@/components/Head.astro';
+const { title, description, className } = Astro.props.frontmatter || Astro.props;
+---
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <Head title={title} description={description}/>
+  </head>
+  <body class={className ? className : ''}>
+    <slot/>
+  </body>
+</html>
