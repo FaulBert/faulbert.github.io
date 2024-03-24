@@ -1,5 +1,5 @@
 ---
 title: 'Test post'
 description: 'Sometimes life is hard'
-pubDate: '32 arch 2045'
+pubDate: 'March 25 2045'
 ---
