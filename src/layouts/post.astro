@@ -5,7 +5,7 @@ import FormattedDate from '@/components/formatted_date.astro'
 
 type Props = CollectionEntry<'blog'>['data']
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props
+const { title, description, tags, pubDate, updatedDate, heroImage } = Astro.props
 ---
 <BaseLayout>
   <article mb-10>
@@ -20,7 +20,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props
 		</section>
 		
 		<section>
-			<span italic text-sm><FormattedDate date={pubDate} /></span>
+			<span italic text-sm>
+				<FormattedDate date={pubDate} /> - {tags.map((t) => (
+					<a href={`/posts/tags/${t}`} mx-1>#{t}</a>
+				))}
+			</span>
 			{
 				updatedDate && (
 					<div italic>
@@ -37,7 +41,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props
 </BaseLayout>
 
 <style is:inline>
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
 	margin: 0 0 0.5rem 0;
 	line-height: 1.2;
 }

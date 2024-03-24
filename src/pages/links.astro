@@ -1,6 +1,6 @@
 ---
 import Layout from '@/layouts/default.astro'
-import Button from '@/components/ButtonLinks.astro'
+import Button from '@/components/button_links.astro'
 import { _author } from '@/data'
 ---
 
@@ -12,11 +12,12 @@ import { _author } from '@/data'
     <section grid grid-cols-2 mb-5>
       <img
         src={_author.avatar}
-        w-40 h-40 rounded-10
-        md:w-50 md:h-50 md:ml-10
+        w-35 h-35 rounded-10
+        md:w-40 md:h-40 md:ml-10
+        lg:w-50 lg:h-50
       />
       <div>
-        <h1 text-5xl>Nazan</h1>
+        <h1 text-4xl font-bold lg:text-5xl mb-1>Nazan</h1>
         <p text-gray-4 italic>
           A Cute Young Guy with Simple Dreams
         </p>

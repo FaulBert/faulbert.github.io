@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config'
 import unocss from 'unocss/astro'
 import icon from 'astro-icon'
+import mdx from '@astrojs/mdx'
 import {
   presetUno,
   presetAttributify
@@ -11,6 +12,7 @@ export default defineConfig({
   site: 'https://nazhard.github.io',
   integrations: [
     icon(),
+    mdx(),
     unocss({
       injectReset: true,
       presets: [
@@ -18,5 +20,10 @@ export default defineConfig({
         presetAttributify()
       ],
     }),
-  ]
-});
+  ],
+  markdown: {
+    shikiConfig: {
+      theme: 'catppuccin-mocha',
+    }
+  }
+})

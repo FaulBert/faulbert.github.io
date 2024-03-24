@@ -1,11 +1,10 @@
 ---
 import BaseLayout from './base.astro'
-import Footer from '@/components/Footer.astro'
+import Footer from '@/components/footer.astro'
 
 const { title, description, footer, header } = Astro.props.frontmatter || Astro.props
 ---
 
-<!doctype html>
 <BaseLayout
   title={title}
   description={description}
