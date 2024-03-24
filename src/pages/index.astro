@@ -8,7 +8,7 @@ import { _author } from '@/data'
   title="I'm Nazhard - A Anime"
   description="Nazhard Personal Website"
 >
-  <section c="white/70" md:pt-2vh md:pt-10vh md:text-lg>
+  <section md:pt-2vh md:pt-10vh>
     <img
       h-auto w-35 rounded-10 float-right
       md:w-45 md:mr-15
@@ -16,10 +16,10 @@ import { _author } from '@/data'
       src={_author.avatar}
       alt="Nazhard profile picture"
     />
-    <h1 text-4xl pt-27 font-extrabold md:text-5xl md:pt-20>
+    <h1 text-4xl font-extrabold pt-27 md:text-5xl md:pt-25>
       Nazan H.
     </h1>
-    <p text-xs font-bold md:text-sm>
+    <p text-sm font-bold md:text-sm>
       Self-taught Programmer & Hobbyist Developer
     </p>
 
@@ -28,28 +28,48 @@ import { _author } from '@/data'
       I'm a person who likes to make useful software or tools for myself, and maybe you.
     </p>
     <p>
-    Yeah, as you can see, I'm not that good at web design haha. I'm not really into front-end myself.
-    I prefer to program using Go, my favorite programming language.
+      Yeah, as you can see, I'm not that good at web design xD. I'm not really into front-end myself.
+    </p>
+  </section>
+
+  <section mt-5>
+    <a no-underline href="/posts">
+      <button font-bold mx-2 px-2 py-1 bg-zinc-7 rounded>
+        Posts
+      </button>
+    </a>
+    <a no-underline href="/projects">
+      <button font-bold mx-2 px-2 py-1 bg-zinc-7 rounded>
+        Projects
+      </button>
+    </a>
+  </section>
+
+  <hr my-7 border-2 border-zinc-7>
+  
+  <section>
+    <p text-xl font-bold mb-5>Tech Stack</p>
+    <p>
+      I use several different programming languages.
+      For web I go with <span c="#007acc">TypeScript</span>,
+      for apps I use <span c="#27aacd">Flutter</span>,
+      for science and making (simple) AI programs I go with <span c="#306998">Python</span>.
     </p>
     <p>
-      I put a few programming languages under that doesn't mean I can do them all haha.
-      I'm just a programming hobbyist, while programming sometimes each field has its own tools.
-      For example, I don't really like Python, but it has a lot of useful libraries for things like machine learning and science.
+      My main languages at the moment is <span c="#00acd7">Golang</span>, for low-level programming I go with <span c="#f7a41d">Zig</span> (modern c)
     </p>
   </section>
 
   <section my-5>
-    <p text-lg font-bold mb-5>Socials</p>
+    <p text-xl font-bold mb-5>Socials</p>
     <p> Below are my places on the internet </p>
     <Socials />
   </section>
 
   <section mb-5>
-    <p text-lg font-bold mb-5>More</p>
+    <p text-xl font-bold mb-5>More</p>
     <ul list-disc list-inside>
       <li my-1><b>Pronouns {">"}</b> He/Him/His/They</li>
-      <li my-1><b>Languages {">"}</b> Go, TS, Kotlin, Python, Zig</li>
-      <li my-1><b>Web Frameworks {">"}</b> Astro, SolidStart, SvelteKit</li>
       <li my-1><b>I can speak {">"}</b> Indonesia (Native), Sundanese (Native), English (Beginner), Japanese (Nah)
     </ul>
   </section>

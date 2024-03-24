@@ -1,3 +1,3 @@
-My personal website
+My cute site!
 
-Under development
+Some colors from [catppuccin](https://catppuccin.com) 🐱(My favorite color scheme)

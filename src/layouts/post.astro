@@ -1,0 +1,100 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import BaseLayout from './default.astro'
+import FormattedDate from '@/components/formatted_date.astro'
+
+type Props = CollectionEntry<'blog'>['data']
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props
+---
+<BaseLayout>
+  <article mb-10>
+		<section>
+			<a href="/posts" text-sm text-gray-4 no-underline>
+				&larr; All Posts
+			</a>
+			<h1 text-3xl font-bold>{title}</h1>
+			<p m-0>
+			  {description}
+			</p>
+		</section>
+		
+		<section>
+			<span italic text-sm><FormattedDate date={pubDate} /></span>
+			{
+				updatedDate && (
+					<div italic>
+						Last updated on <FormattedDate date={updatedDate} />
+			  	</div>
+				)
+			}
+		</section>
+   
+  	<hr my-7 border-2 border-zinc-7>
+	
+		<slot />
+	</article>
+</BaseLayout>
+
+<style is:inline>
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 0.5rem 0;
+	line-height: 1.2;
+}
+h1 {
+	font-size: 2.44em;
+	color: #cdd6f4;
+}
+h2 {
+	font-size: 2.05em;
+	color: #cdd6f4;
+}
+h3 {
+	font-size: 1.6em;
+}
+h4 {
+	font-size: 1.35em;
+}
+h5 {
+	font-size: 1em;
+}
+strong, b {
+	font-weight: 700;
+}
+textarea {
+	width: 100%;
+	font-size: 16px;
+}
+input {
+	font-size: 16px;
+}
+table {
+	width: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+code {
+	padding: 2px 5px;
+	background-color: #45475a;
+	border-radius: 2px;
+}
+pre {
+	padding: 0.5em;
+	border-radius: 5px;
+}
+pre > code {
+	all: unset;
+	font-size: 15px;
+}
+blockquote {
+	border-left: 4px solid #89b4fa;
+	padding: 0 0 0 20px;
+	font-size: 0.8em;
+}
+hr {
+	border-top: 2px solid #45475a;
+}
+</style>
