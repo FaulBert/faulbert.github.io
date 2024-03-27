@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import Layout from '@/layouts/default.astro'
+import FormattedDate from '@/components/formatted_date.astro'
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts')
@@ -22,25 +23,26 @@ const { posts } = Astro.props
 
 <Layout>
 	<section>
-		<a href="/posts/tags" text-sm text-gray-4 no-underline>&larr; All Tags</a>
+		<a href="/categories" text-sm text-gray-4 no-underline>&larr; All Tags</a>
 		<h1 text-2xl font-bold>Posts with {tag} tag</h1>
 	</section>
   <section>
 		<ul>
-			{
-				posts.map((post) => (
-				  <li mb-10>
-						<a no-underline href={`/posts/${post.slug}/`}>
-						  <h4 text-2xl font-bold>
-								{post.data.title}
-							</h4>
-							<p m-0 my-1>
-								{post.data.description}
-							</p>
-						</a>
-					</li>
-				))
-			}
+			{posts.map((post) => (
+			  <li mb-10>
+					<a no-underline href={`/posts/${post.slug}/`}>
+					  <h4 text-2xl font-bold>
+							{post.data.title}
+						</h4>
+						<p m-0 my-1>
+							{post.data.description}
+						</p>
+						<p m-0 text-xs>
+							<FormattedDate date={post.data.pubDate} />
+						</p>
+					</a>
+				</li>
+			))}
 		</ul>
 	</section>
 </Layout>

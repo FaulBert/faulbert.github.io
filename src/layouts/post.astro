@@ -2,18 +2,20 @@
 import type { CollectionEntry } from 'astro:content'
 import BaseLayout from './default.astro'
 import FormattedDate from '@/components/formatted_date.astro'
+import ReadingTime from '@/components/reading_time.astro'
 
 type Props = CollectionEntry<'blog'>['data']
 
-const { title, description, tags, pubDate, updatedDate, heroImage } = Astro.props
+const { time, title, description, tags, pubDate, updatedDate } = Astro.props
 ---
+
 <BaseLayout>
-  <article mb-10>
+  <article mb-5>
 		<section>
 			<a href="/posts" text-sm text-gray-4 no-underline>
 				&larr; All Posts
 			</a>
-			<h1 text-3xl font-bold>{title}</h1>
+			<h1 text-4xl font-bold>{title}</h1>
 			<p m-0>
 			  {description}
 			</p>
@@ -21,23 +23,47 @@ const { title, description, tags, pubDate, updatedDate, heroImage } = Astro.prop
 		
 		<section>
 			<span italic text-sm>
-				<FormattedDate date={pubDate} /> - {tags.map((t) => (
-					<a href={`/posts/tags/${t}`} mx-1>#{t}</a>
-				))}
+				<FormattedDate date={pubDate} /> - <ReadingTime post={time} />
 			</span>
-			{
-				updatedDate && (
-					<div italic>
-						Last updated on <FormattedDate date={updatedDate} />
-			  	</div>
-				)
-			}
+			{updatedDate && (
+				<div italic>
+					Last updated on <FormattedDate date={updatedDate} />
+				</div>
+			)}
 		</section>
    
-  	<hr my-7 border-2 border-zinc-7>
+  	<hr mt-5 mb-7 border-1 border-zinc-7>
 	
 		<slot />
+
+		<p>Thanks for reading, onii-can & nee-chan!! :3</p>
+
+		<div my-5>
+			{tags.map((t) => (
+				<a href={`/categories/${t}`}
+					class="bg-zinc-8 rounded-xl hover:bg-zinc-7"
+      	  text-sm font-bold mx-1 px-5 py-1 no-underline>#{t}</a>
+			))}
+		</div>
+
+		<hr border-1 border-zinc-7>
 	</article>
+
+	<script src="https://giscus.app/client.js"
+    data-repo="nazhard/nazhard.github.io"
+    data-repo-id="R_kgDOKyFtgw"
+    data-category="General"
+    data-category-id="DIC_kwDOKyFtg84CeRqX"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+	</script>
 </BaseLayout>
 
 <style is:inline>

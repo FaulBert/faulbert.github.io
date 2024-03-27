@@ -15,6 +15,6 @@ const post = Astro.props
 const { Content } = await post.render()
 ---
 
-<Layout {...post.data}>
+<Layout {...post.data} time={post}>
 	<Content />
 </Layout>

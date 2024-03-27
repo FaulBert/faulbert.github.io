@@ -1,0 +1,14 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { getReadingTime } from '@/utils/reading-time'
+
+interface Props {
+  post: CollectionEntry<'blog'>
+}
+
+const { post } = Astro.props
+
+const readingTime = getReadingTime(post.body)
+---
+
+<span>{readingTime}</span>

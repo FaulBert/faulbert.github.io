@@ -1,8 +1,10 @@
 ---
+import type { CollectionEntry } from 'astro:content'
 import { getCollection } from 'astro:content'
 import { Icon } from 'astro-icon/components'
 import Layout from '@/layouts/default.astro'
 import FormattedDate from '@/components/formatted_date.astro'
+import ReadingTime from '@/components/reading_time.astro'
 
 const posts = (await getCollection('posts')).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -40,9 +42,7 @@ const posts = (await getCollection('posts')).sort(
 						<p italic text-sm>
 							<FormattedDate date={post.data.pubDate} />
 							-
-							{post.data.tags.map((t) => (
-								<span mx-1>#{t}</span>
-							))}
+							<ReadingTime post={post} />
 						</p>
 					</a>
 				</li>
