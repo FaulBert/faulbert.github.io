@@ -8,9 +8,9 @@ tags:
   - 'literasi'
 ---
 
-> "If you don’t like to read, you haven’t found the right book."
->
-> <span>— J.K. Rowling </span>
+> “Today a reader, tomorrow a leader.”
+> 
+> <span>— Margaret Fuller</span>
 
 Membaca buku, aktivitas yang mudah namun sulit untuk dilakukan.
 Banyak dari kita pernah membaca buku, dan itu pasti (mungkin).
