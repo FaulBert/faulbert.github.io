@@ -1,0 +1,27 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+
+type Props = HTMLAttributes<'a'>
+
+const { isOut, line, class: className, href, ...props } = Astro.props
+---
+
+<a
+  class:list={[className, { after: isOut }, { under: line}]}
+  href={href}
+  {...props}
+>
+  <slot />
+</a>
+
+<style>
+  a:hover {
+	  color: #89b4fa;
+  }
+  .under {
+    color: #F9F9F9;
+    text-decoration: underline #89b4fa 1.2px;
+    text-underline-offset: 4px;
+  }
+  .after::after { content: '↗' }
+</style>

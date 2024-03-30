@@ -2,10 +2,8 @@ import { defineConfig } from 'astro/config'
 import unocss from 'unocss/astro'
 import icon from 'astro-icon'
 import mdx from '@astrojs/mdx'
-import {
-  presetUno,
-  presetAttributify
-} from 'unocss'
+import solidJs from '@astrojs/solid-js'
+import { presetUno, presetAttributify } from 'unocss'
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,17 +11,15 @@ export default defineConfig({
   integrations: [
     icon(),
     mdx(),
+    solidJs(),
     unocss({
       injectReset: true,
-      presets: [
-        presetUno(),
-        presetAttributify()
-      ],
+      presets: [presetUno(), presetAttributify()]
     }),
   ],
   markdown: {
     shikiConfig: {
-      theme: 'catppuccin-mocha',
+      theme: 'catppuccin-mocha'
     }
   }
 })

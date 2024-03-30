@@ -1,9 +1,9 @@
 ---
 import { Icon } from 'astro-icon/components'
-import { _links } from '@/data'
+import { SOCIALS } from '@config'
 ---
 
-{_links.map(({ name, url }) => (
+{SOCIALS.slice(0, 3).map(({ name, url }) => (
   <a
     href={url}
     target="_blank"

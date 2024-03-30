@@ -1,44 +1,42 @@
 ---
-import BaseLayout from './base.astro'
-import Footer from '@/components/footer.astro'
+import Head from '@/components/head.astro'
 
 const { title, description, footer, header } = Astro.props.frontmatter || Astro.props
 ---
 
-<BaseLayout
-  title={title}
-  description={description}
-  className="bg-#111010 text-#bac2de text-17px tracking-wide md:text-lg">
-  <div class="max-w-[648px] h-fit inset-0 m-auto px-5 py-10">
-    <main>
-      <slot />
-    </main>
-    <Footer
-      display={ footer == 'no' ? 'hidden' : 'block mt-5' }
-    />
-  </div>
-</BaseLayout>
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <Head title={title} description={description}/>
+  </head>
+  <body class="text-16px tracking-wide bg-#0F0F0F text-#F9F9F9 md:text-lg">
+    <div class="max-w-[640px] h-fit inset-0 m-auto px-5 py-10">
+      <main>
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
 
 <style is:global>
 h1, h2 {
   line-height: 1.375;
+  font-weight: 700;
   margin: 15px 0 20px 0;
 }
 body {
   font-family: "Hanken Grotesk", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
 }
 p {
   line-height: 1.6;
   margin: 15px 0 15px 0;
 }
 a {
-  text-decoration: underline #0072eb 2.5px;
-  text-underline-offset: 5px;
+  text-decoration: underline #89b4fa 1.2px;
+  text-underline-offset: 4px;
 }
 a:hover {
-	color: #89b4fa;
+  color: #89b4fa;
 }
 </style>

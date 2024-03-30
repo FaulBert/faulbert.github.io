@@ -2,6 +2,7 @@
 title: 'Saya Tidak Setuju Dengan Ungkapan Yang Berkaitan Dengan Membaca Buku'
 description: 'Saya menentang ungkapan guru saya sekaligus perintah untuk membaca buku.'
 pubDate: 2024-03-28
+updatedDate: 2024-03-29
 tags:
   - 'id'
   - 'membaca'
@@ -69,6 +70,6 @@ Apa yang ingin saya sampaikan adalah, jika Anda bisa melihat dunia dengan membac
 
 Buku, Artikel, Kitab Suci, Manga, Komik, Doujinshi (bukan aneh-aneh loh), dan apapun hal itu selama tidak mengandung unsur negatif, Maka, lakukanlah.
 
-Dengan semua ini, akan saya tutup dengan #AYO_PEBANYAK_MEMBACA
+Dengan semua ini, akan saya tutup dengan #AYO_PERBANYAK_MEMBACA
 
 Membaca, tidak membuat kamu pintar, tapi dengan membaca membuat kamu tau apa makna dari dunia ini. Semangat membacanya ya!!

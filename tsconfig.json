@@ -2,10 +2,13 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strictNullChecks": true,
-    "baseUrl": ".",
+    "baseUrl": "/data/data/com.termux/files/home/workspace/nazhard.github.io",
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "@config": [
+        "src/config.ts"
       ]
     }
   }

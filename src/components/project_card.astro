@@ -1,0 +1,28 @@
+---
+import A from '@/components/a.astro'
+
+const { name, desc, repo, web, doc } = Astro.props
+---
+
+<div>
+  <p text-xl font-bold m-0>
+    {name}
+  </p>
+  <p ml-5 m-0>{desc}</p>
+  <div mt-1.5>
+    <A
+      isOut
+      target="_blank"
+      href={'https://github.com/nazhard/'+repo}
+      class="mx-5"
+    >
+      repo
+    </A>
+    { web && <span>
+      <A isOut target="_blank" href={web} class="mx-5">Website</A>
+    </span> }
+    { doc && <span>
+      <A isOut target="_blank" href={doc} class="mx-5">Documentation</A>
+    </span> }
+  </div>
+</div>

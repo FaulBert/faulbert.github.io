@@ -1,0 +1,22 @@
+---
+import Layout from '@/layouts/default.astro'
+import Card from '@/components/project_card.astro'
+import { PROJECTS } from '@/data'
+---
+
+<Layout>
+	<a href="/" text-sm text-gray-4 no-underline>&larr; Back</a>
+  <h1 text-4xl>Random Stuff</h1>
+
+  {PROJECTS.map((p) => (
+    <div my-3>
+      <Card
+        name={p.name}
+        desc={p.desc}
+        repo={p.repo}
+        web={p.web}
+        doc={p.doc}
+      />
+    </div>
+  ))}
+</Layout>
