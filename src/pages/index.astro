@@ -2,7 +2,6 @@
 import Layout from '@/layouts/default.astro'
 import Hr from '@/components/hr.astro'
 import Socials from '@/components/socials.astro'
-import Footer from '@/components/footer.astro'
 import { AUTHOR } from '@config'
 ---
 
@@ -11,37 +10,41 @@ import { AUTHOR } from '@config'
   description="Nazhard Personal Website"
 >
   <section>
-    <img
-      h-auto w-37 rounded-10 float-left
-      md:mr-15
-      outline="~ zinc-900"
-      src={AUTHOR.avatar}
-      alt="Nazhard profile picture"
-    />
+    <a target="_blank" href={AUTHOR.avatar_url}>
+      <img
+        h-auto w-37 rounded-10 float-left
+        md:w-40 lg:45 md:mr-15
+        outline="~ zinc-900"
+        src={AUTHOR.avatar}
+        alt="Nazhard profile picture"
+      />
+    </a>
     <div ml-40>
-      <h1 text-4xl font-extrabold pt-3 md:text-5xl>
+      <h1 text-4xl font-extrabold pt-3 md:text-5xl m-0>
         Nazan H.
       </h1>
       <p text-sm>
-        Self-taught Programmer with an interest in system programming
+        Self-taught Programmer with an interest in compilers and cute anime girls
       </p>
     </div>
   </section>
   <section>
-    <h2 text-2xl pt-15>About Me</h2>
+    <h2 text-2xl pt-12>About Me</h2>
     <p>
       I'm Nazan aka Nazhard, a 15 year old hobbyist developer living in Indonesia.
       I'm a person who likes to make useful software or tools for myself, and maybe you.
     </p>
     <p>
-      Yeah, as you can see, I'm not that good at web design xD. I'm not really into front-end myself.
+      I'm a teenage boy and my pronouns are He/They because I know I can be what I want to be.
     </p>
-    
+    <p>
+      My main language is Indonesian, then Sundanese and finally English. I wish I can master Japanese!
+    </p>
+    <p>
+      My favorite programming language is Golang, and for low-level I prefer zig (it's easier than C).
+      Languages that I'm interested in: OCaml & Nim
+    </p>
     <p><b>Social Links:</b></p>
     <Socials />
-  </section>
-
-  <section mt-15>
-    <Footer />
   </section>
 </Layout>

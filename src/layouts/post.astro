@@ -3,7 +3,6 @@ import type { CollectionEntry } from 'astro:content'
 import BaseLayout from './default.astro'
 import FormattedDate from '@/components/formatted_date.astro'
 import ReadingTime from '@/components/reading_time.astro'
-import Footer from '@/components/footer.astro'
 import A from '@/components/a.astro'
 
 type Props = CollectionEntry<'blog'>['data']
@@ -61,10 +60,6 @@ const { time, title, description, tags, pubDate, updatedDate } = Astro.props
     crossorigin="anonymous"
     async>
 	</script>
-
-	<div my-5 mt-10>
-		<Footer />
-	</div>
 </BaseLayout>
 
 <style is:inline>

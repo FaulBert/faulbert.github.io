@@ -1,5 +1,6 @@
 ---
 import Head from '@/components/head.astro'
+import Footer from '@/components/footer.astro'
 
 const { title, description, footer, header } = Astro.props.frontmatter || Astro.props
 ---
@@ -10,10 +11,14 @@ const { title, description, footer, header } = Astro.props.frontmatter || Astro.
     <Head title={title} description={description}/>
   </head>
   <body class="text-16px tracking-wide bg-#0F0F0F text-#F9F9F9 md:text-lg">
-    <div class="max-w-[640px] h-fit inset-0 m-auto px-5 py-10">
+    <div class="max-w-[640px] h-fit inset-0 m-auto px-5 py-10 md:px-10">
       <main>
         <slot />
       </main>
+      
+      <section mt-15>
+        <Footer />
+      </section>
     </div>
   </body>
 </html>

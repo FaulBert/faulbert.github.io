@@ -5,7 +5,8 @@ export const SITE = {
 
 export const AUTHOR = {
   name: 'Nazhard',
-  avatar: 'https://avatars.githubusercontent.com/u/121859424?v=4'
+  avatar: 'https://avatars.githubusercontent.com/u/121859424?v=4',
+  avatar_url: 'https://pin.it/3TuFnAywP'
 }
 
 export const SOCIALS = [
