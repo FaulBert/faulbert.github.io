@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+import { Icon } from 'astro-icon/components'
 import BaseLayout from './default.astro'
 import FormattedDate from '@/components/formatted_date.astro'
 import ReadingTime from '@/components/reading_time.astro'
@@ -10,8 +11,35 @@ type Props = CollectionEntry<'blog'>['data']
 const { time, title, description, tags, pubDate, updatedDate } = Astro.props
 ---
 
+<script>
+	window.addEventListener('scroll', function() {
+    const btn = document.getElementById('returnToTopBtn')
+		const h = window.innerHeight - 200
+    if (window.scrollY > h) {
+      btn.classList.remove('hidden')
+      btn.classList.add('block')
+    } else {
+      btn.classList.remove('block')
+      btn.classList.add('hidden')
+    }
+	})
+	
+	document.getElementById('returnToTopBtn').addEventListener('click', function() {
+    window.scrollTo({top: 0, behavior: 'smooth'})
+	})
+</script>
+
 <BaseLayout>
   <article mb-5>
+		<button
+		id="returnToTopBtn"
+		class="fixed bottom-20 right-10 hidden bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded
+		lg:right-15">
+      <Icon
+        name="ui/top" class="w-7 h-7"
+      />
+		</button>
+
 		<a href="/posts" text-sm text-gray-4 no-underline>
 			&larr; All Posts
 		</a>

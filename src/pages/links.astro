@@ -1,0 +1,44 @@
+---
+import Layout from '@/layouts/default.astro'
+import Socials from '@/components/socials.astro'
+import Hr from '@/components/hr.astro'
+import A from '@/components/a.astro'
+import { AUTHOR } from '@config'
+---
+
+<Layout>
+  <section h-20>
+    <a target="_blank" href={AUTHOR.avatar_url}>
+      <img
+        h-auto w-20 rounded-10 float-left
+        outline="~ zinc-900"
+        src={AUTHOR.avatar}
+        alt="Nazhard profile picture"
+      />
+    </a>
+    <div ml-25>
+      <h1 text-xl font-extrabold pt-3 m-0>
+        Nazhard
+      </h1>
+      <p text-sm m-0>
+        <A isOut line href="https://github.com/nazhard">@nazhard</A>
+      </p>
+    </div>
+  </section>
+
+  <Hr />
+
+  <section flex justify-center my-5 md:mx-5>
+    <a
+      border-2 border-blue-5 hover:bg-blue-5 py-2 px-4 rounded-full w-full no-underline relative overflow-hidden
+      href="/">
+      <span text-white font-bold>
+        Nothing
+      </span>
+    </a>
+  </section>
+
+  <section text-center>
+    <Socials />
+  </section>
+</Layout>

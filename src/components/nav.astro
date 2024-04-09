@@ -2,26 +2,33 @@
 import { Icon } from 'astro-icon/components'
 
 const links = [
-  { href: '/blog', text: 'blog', icon: 'paper' },
-  { href: '/projects', text: 'projects', icon: 'code-bracket-solid' },
+  { href: '/', text: 'home', icon: 'home' },
+  { href: '/about', text: 'about', icon: 'about' },
+  { href: '/posts', text: 'blog', icon: 'paper' },
+  { href: '/projects', text: 'projects', icon: 'cube' },
+  { href: '/links', text: 'links', icon: 'link' },
+  { href: 'https://github.com/nazhard?tab=repositories', text: 'git', icon: 'git' },
 ]
 ---
 
-<nav class="kill">
+<nav
+  bg="white/30" backdrop-blur-sm rounded-md
+  fixed max-md:bottom-2 max-md:inset-x-7
+  md:mr-5vw md:left-5 md:top-5>
   <ul
-    p="t2 b1"
-    overflow="x-scroll y-hidden"
-    whitespace-nowrap
-    no-scrollbar
-  >
+    pt-2 pb-1 whitespace-nowrap no-scrollbar
+    max-md:overflow="x-scroll y-hidden"
+    md:flex md:flex-col>
     {links.map(({icon, text, href}) => (
-      <li w-fit inline-block mx-1 p1.5 px-2 rounded bg-zinc-8>
-        <a no-underline inline-flex items-baseline href={href}>
+      <li w-fit inline-block rounded bg-zinc-8 p-2
+          max-md:mx-1
+          md:my-1 md:mx-0.5>
+        <a no-underline max-md:inline-flex max-md:items-baseline href={href}>
           <Icon
-            name={icon}
-            class="self-center w-5 h-5 mx-1"
+            name={"ui/"+icon}
+            class="self-center w-5 h-5 max-md:mx-1 md:w-7 md:h-7"
           />
-          <span>{text.toUpperCase()}</span>
+          <span md:hidden>{text.toUpperCase()}</span>
         </a>
       </li>
     ))}
