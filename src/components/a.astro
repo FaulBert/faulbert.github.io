@@ -3,11 +3,11 @@ import type { HTMLAttributes } from 'astro/types'
 
 type Props = HTMLAttributes<'a'>
 
-const { isOut, line, class: className, href, ...props } = Astro.props
+const { out, r, line, class: className, href, ...props } = Astro.props
 ---
 
 <a
-  class:list={[className, { after: isOut }, { under: line}]}
+  class:list={[className, { after: out }, { right: r}, { under: line}]}
   href={href}
   {...props}
 >
@@ -24,4 +24,5 @@ const { isOut, line, class: className, href, ...props } = Astro.props
     text-underline-offset: 4px;
   }
   .after::after { content: '↗' }
+  .right::after { content: '\2192' }
 </style>

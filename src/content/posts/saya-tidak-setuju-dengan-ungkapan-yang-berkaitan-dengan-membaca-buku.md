@@ -9,9 +9,10 @@ tags:
   - 'literasi'
 ---
 
-> “Today a reader, tomorrow a leader.”
-> 
-> <span>— Margaret Fuller</span>
+<div class="q">
+  “Today a reader, tomorrow a leader.”
+  <span>— Margaret Fuller</span>
+</div>
 
 Membaca buku, aktivitas yang mudah namun sulit untuk dilakukan.
 Banyak dari kita pernah membaca buku, dan itu pasti (mungkin).
