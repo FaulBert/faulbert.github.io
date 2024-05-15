@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content'
 import { getCollection } from 'astro:content'
 import { Icon } from 'astro-icon/components'
+import { AUTHOR } from '@config'
 import Layout from '@/layouts/default.astro'
 import FormattedDate from '@/components/formatted_date.astro'
 import ReadingTime from '@/components/reading_time.astro'
@@ -9,9 +10,11 @@ import ReadingTime from '@/components/reading_time.astro'
 const posts = (await getCollection('posts')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 )
+
+const title = `Blog | ${AUTHOR.name}`
 ---
 
-<Layout title="Blog | Nazhard">
+<Layout title={title}>
 	<section>
 		<a href="/" text-sm text-gray-4 no-underline>&larr; Back</a>
 		<h1 text-3xl font-bold>Blog Posts</h1>

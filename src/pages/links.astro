@@ -3,7 +3,7 @@ import Layout from '@/layouts/default.astro'
 import Socials from '@/components/socials.astro'
 import Hr from '@/components/hr.astro'
 import A from '@/components/a.astro'
-import { AUTHOR } from '@config'
+import { AUTHOR, SOCIALS } from '@config'
 ---
 
 <Layout>
@@ -18,10 +18,10 @@ import { AUTHOR } from '@config'
     </a>
     <div ml-25>
       <h1 text-xl font-extrabold pt-3 m-0>
-        Nazhard
+        {AUTHOR.name}
       </h1>
       <p text-sm m-0>
-        <A isOut line href="https://github.com/nazhard">@nazhard</A>
+        <A isOut line href={SOCIALS[0].url}>{AUTHOR.handle}</A>
       </p>
     </div>
   </section>

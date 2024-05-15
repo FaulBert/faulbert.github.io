@@ -12,12 +12,12 @@ const posts = (await getCollection('posts')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 )
 const recentPosts = posts.slice(0, 5)
+
+const title = `${AUTHOR.name} Home`
+const desc = `${AUTHOR.name} Personal Website`
 ---
 
-<Layout
-  title="I'm Nazhard - A Anime"
-  description="Nazhard Personal Website"
->
+<Layout title={title} description={desc}>
   <section>
     <a target="_blank" href={AUTHOR.avatar_url}>
       <img
@@ -25,18 +25,19 @@ const recentPosts = posts.slice(0, 5)
         md:w-35 lg:45 md:mr-15
         outline="~ zinc-900"
         src={AUTHOR.avatar}
-        alt="Nazhard profile picture"
+        alt={AUTHOR.name + " profile picture"}
       />
     </a>
     <div ml-27 mb-10>
       <p text-2xl font-extrabold md:text-5xl m-0 pt-2>
-        Nazan H.
+        {AUTHOR.name}
       </p>
       <p text-xs>
         Cute Self-taught Programmer with an interest in compilers and cute anime girls
       </p>
     </div>
   </section>
+
   <section>
     <p>
       Cute hobbyist developer from Indonesia. I create and design simple tools for (mostly) personal use.

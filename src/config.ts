@@ -1,10 +1,11 @@
 export const SITE = {
   title: 'Nazhard Personal Site',
-  repo: 'https://github.com/nazhard/website'
+  repo: 'https://github.com/fiorin-chan/fiorin-chan.github.io'
 }
 
 export const AUTHOR = {
-  name: 'Nazhard',
+  name: 'Fiona',
+  handle: 'fiorin-chan',
   avatar: 'https://avatars.githubusercontent.com/u/121859424?v=4',
   avatar_url: 'https://pin.it/3TuFnAywP'
 }
@@ -12,7 +13,7 @@ export const AUTHOR = {
 export const SOCIALS = [
   {
     name: 'GitHub',
-    url: 'https://github.com/nazhard',
+    url: 'https://github.com/fiorin-chan',
   },
   {
     name: 'X',
@@ -20,10 +21,6 @@ export const SOCIALS = [
   },
   {
     name: 'Telegram',
-    url: 'https://t.me/nazhard',
-  },
-  {
-    name: 'Wikipedia',
-    url: 'https://id.wikipedia.org/wiki/Pengguna:Nazhard',
-  },
+    url: 'https://t.me/fiorin_chan',
+  }
 ]
