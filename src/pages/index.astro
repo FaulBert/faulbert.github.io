@@ -15,65 +15,70 @@ const recentPosts = posts.slice(0, 5)
 
 const title = `${AUTHOR.name} Home`
 const desc = `${AUTHOR.name} Personal Website`
+const things = [
+  { to: "/about", tx: "About Me", em: "☺️"},
+  { to: "/posts", tx: "All Posts", em: "📑" },
+  { to: "/projects", tx: "Projects", em: "📦" },
+]
 ---
 
 <Layout title={title} description={desc}>
-  <section>
+  <div w-30 h-30 bg-black p-2 rounded-15px transform -rotate-7>
     <a target="_blank" href={AUTHOR.avatar_url}>
       <img
-        h-auto w-25 rounded-7 float-left
-        md:w-35 lg:45 md:mr-15
+        w-full h-full rounded-25px transform rotate-14
         outline="~ zinc-900"
         src={AUTHOR.avatar}
         alt={AUTHOR.name + " profile picture"}
       />
     </a>
-    <div ml-27 mb-10>
-      <p text-2xl font-extrabold md:text-5xl m-0 pt-2>
-        {AUTHOR.name}
-      </p>
-      <p text-xs>
-        Cute Self-taught Programmer with an interest in compilers and cute anime girls
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <p>
-      Cute hobbyist developer from Indonesia. I create and design simple tools for (mostly) personal use.
+  </div>
+  
+  <div>
+    <h1 text-4xl font-extrabold md:text-5xl m-0 pt-2>
+      {AUTHOR.name}
+    </h1>
+    <p text-sm lg:text-base>
+      Cute Self-taught Programmer with an interest in compilers and cute anime girls
     </p>
-    <A r href="/about">About Me</A>
-    
-    <h2 text-xl mt-10>Contact</h2>
-    <p>
-      Do you need help with your open source project?
-      I can help you, but maybe you'll help me XD.
-      Regardless, please contact me via email: <a href="mailto:nazhard@proton.me">nazhard@proton.me</a>.
-      If it's an informal matter, You can do it via telegram :)
-    <p>
-    <p m-0><Socials /></p>
+  </div>
 
-    <Hr />
+  <Hr />
 
-    <h2 text-xl>Recent Posts</h2>
-		<ul>
-			{recentPosts.map((post) => (
-				<li mb-10>
-					<a text-xl font-bold no-underline href={`/posts/${post.slug}/`}>
-						{post.data.title}
-					</a>
-					<p m-0 my-1>
-						{post.data.description}
-					</p>
-					<span italic text-sm>
-						<FormattedDate date={post.data.pubDate} />
-						-
-						<ReadingTime post={post} />
-					</span>
-				</li>
-			))}
-		</ul>
+  <p>
+    Hello, welcome to Fiona's website! Home of the self-taught programmer, philosopher, and novelist.
+  </p>
 
-    <A r href="/posts">Read All</A>
-	</section>
+  <div>
+    <ul>
+      {things.map((t) => (
+        <li my-2>
+          <a text-xl href={t.to}> {t.em} {t.tx} </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <Hr />
+
+  <h2 text-xl>Recent Posts</h2>
+	<ul>
+		{recentPosts.map((post) => (
+			<li mb-10>
+				<a text-xl font-bold no-underline href={`/posts/${post.slug}/`}>
+			  	{post.data.title}
+				</a>
+				<p m-0 my-1>
+  				{post.data.description}
+				</p>
+				<span italic text-sm>
+					<FormattedDate date={post.data.pubDate} />
+	    			-
+					<ReadingTime post={post} />
+				</span>
+			</li>
+		))}
+	</ul>
+  
+  <A r href="/posts">Read All</A>
 </Layout>

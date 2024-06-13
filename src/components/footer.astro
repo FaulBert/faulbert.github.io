@@ -16,14 +16,12 @@ const nav: Nav[] = [
 const repo: string = 'https://github.com/nazhard/nazhard.github.io'
 ---
 
-<footer text-center text-gray-4>
-  <p m-0>
-    &copy; Nazhard | <A isOut line href={repo}>Source</A>
-  </p>
+<footer text-center text-gray-7>
+  <p m-0> &copy; Fiona </p>
   <ul>
     {nav.map(({text, href, isLine}) => (
       <li inline-block mx-1>
-        <A href={href} class="no-underline text-gray-4">
+        <A href={href} class="no-underline">
           {text}
         </A>
         {isLine ? '-' : ''}

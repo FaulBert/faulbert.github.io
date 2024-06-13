@@ -1,7 +1,6 @@
 ---
 import Head from '@/components/head.astro'
 import Footer from '@/components/footer.astro'
-import Nav from '@/components/nav.astro'
 
 const { title, description, footer, header } = Astro.props.frontmatter || Astro.props
 ---
@@ -11,10 +10,8 @@ const { title, description, footer, header } = Astro.props.frontmatter || Astro.
   <head>
     <Head title={title} description={description}/>
   </head>
-  <body class="text-16px tracking-wide bg-#0F0F0F text-#F9F9F9 md:text-lg">
+  <body class="text-16px tracking-wide bg-#FFD0EC text-#2B2730 md:text-lg">
     <div class="relative max-w-[650px] h-fit inset-0 m-auto px-5 py-10 md:px-10">
-      <Nav />
-      
       <main md:mr-5>
         <slot />
       </main>
@@ -46,5 +43,8 @@ a {
 }
 a:hover {
   color: #89b4fa;
+}
+img, pre {
+  margin: 0;
 }
 </style>

@@ -41,7 +41,7 @@ Karenanya, sekecil apapun kemungkinan, dengan semangat yang membara mimpimu akan
 
 🐱: Tunggu... Bagaimana dengan nasib remaja tadi ya?
 
-Kamu penasaran? Tentu saja, remaja itu bukan orang biasa yang mudah putua asa layaknya bayi yang akan terus mengejar namun pada akhirnya merenggek.
+Kamu penasaran? Tentu saja, remaja itu bukan orang biasa yang mudah putus asa layaknya bayi yang akan terus mengejar namun pada akhirnya merenggek.
 Remaja itu tetap bersemangat melawan apa yang ada dan terus bertarung meski orang-orang mungkin berpikir mustahil untuk menggapai impiannya.
 
 Kamu pasti sering berpikir "ah, mimpi buat apa, gak ngasilin uang juga" nah, nanti saya akan menulis artikel lain untuk membahas ini. Sekarang, fokuslah untuk mengejar mimpimu. Entah itu dengan belajar, latihan fisik, dan sebagainya.
