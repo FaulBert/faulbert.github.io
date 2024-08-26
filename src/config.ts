@@ -1,26 +1,22 @@
 export const SITE = {
-  title: 'Nazhard Personal Site',
-  repo: 'https://github.com/fiorin-chan/fiorin-chan.github.io'
+  title: 'Faulbert Personal Site',
+  repo: 'https://github.com/faulbert/faulbert.github.io'
 }
 
 export const AUTHOR = {
-  name: 'Fiona',
-  handle: 'fiorin-chan',
+  name: 'Albert Faulheit',
+  handle: 'faulbert',
   avatar: 'https://avatars.githubusercontent.com/u/121859424?v=4',
-  avatar_url: 'https://pin.it/3TuFnAywP'
+  avatar_url: 'https://github.com/faulbert'
 }
 
 export const SOCIALS = [
   {
     name: 'GitHub',
-    url: 'https://github.com/fiorin-chan',
+    url: 'https://github.com/faulbert',
   },
   {
     name: 'X',
-    url: 'https://x.com/NazLightning',
-  },
-  {
-    name: 'Telegram',
-    url: 'https://t.me/fiorin_chan',
+    url: 'https://x.com/albert_faulbert',
   }
 ]

@@ -8,7 +8,7 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
 
 <Layout title="Post Categories | Nazhard">
 	<section>
-		<a href="/" text-sm text-gray-6 no-underline>
+		<a href="/" text-sm text-gray-4 no-underline>
 			⌂ Go Back Home
 		</a>
     <h1 text-2xl font-bold>All Categories</h1>
@@ -16,9 +16,13 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
 
   <div mb-10>
     {tags.map((tag) => (
-      <a href={`/categories/${tag}`}
+      <a
+				href={`/categories/${tag}`}
         class="bg-zinc-8 rounded-xl hover:bg-zinc-7"
-        font-bold mx-2 my-1 px-5 py-2 no-underline>{tag}</a>
+        font-bold mx-2 my-2 px-5 py-2 no-underline
+			>
+				{tag}
+			</a>
     ))}
   </div>
 </Layout>

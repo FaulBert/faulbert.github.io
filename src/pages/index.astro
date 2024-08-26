@@ -17,13 +17,15 @@ const title = `${AUTHOR.name} Home`
 const desc = `${AUTHOR.name} Personal Website`
 const things = [
   { to: "/about", tx: "About Me", em: "☺️"},
-  { to: "/posts", tx: "All Posts", em: "📑" },
   { to: "/projects", tx: "Projects", em: "📦" },
+  { to: "/posts", tx: "All Posts", em: "📑" },
+  { to: "/writings", tx: "Writings", em: "📝" },
+  { to: "/", tx: "Books", em: "📚" },
 ]
 ---
 
 <Layout title={title} description={desc}>
-  <div w-30 h-30 bg-black p-2 rounded-15px transform -rotate-7>
+  <div class="w-30 h-30 bg-#6A7EFC p-2 rounded-15px transform -rotate-7">
     <a target="_blank" href={AUTHOR.avatar_url}>
       <img
         w-full h-full rounded-25px transform rotate-14
@@ -39,14 +41,14 @@ const things = [
       {AUTHOR.name}
     </h1>
     <p text-sm lg:text-base>
-      Cute Self-taught Programmer with an interest in compilers and cute anime girls
+      Self-taught Programmer with an interest in compilers and cute anime girls
     </p>
   </div>
 
   <Hr />
 
   <p>
-    Hello, welcome to Fiona's website! Home of the self-taught programmer, philosopher, and novelist.
+    Hello, welcome to FaulBert's website! Home of the self-taught programmer, philosopher, and novelist.
   </p>
 
   <div>
