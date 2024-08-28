@@ -1,23 +1,16 @@
 ---
 import A from '@/components/a.astro'
+import { AUTHOR } from '@config'
 
-interface Nav {
-  text: string
-  href: string
-  isLine: bool
-}
-
-const nav: Nav[] = [
+const nav = [
   {text: 'Home',     href: '/',         isLine: true},
   {text: 'Posts',    href: '/posts',    isLine: true},
   {text: 'Projects', href: '/projects', isLine: false}
 ]
-
-const repo: string = 'https://github.com/nazhard/nazhard.github.io'
 ---
 
 <footer text-center text-gray-4>
-  <p m-0> &copy; Fiona </p>
+  <p m-0> &copy {AUTHOR.name} </p>
   <ul>
     {nav.map(({text, href, isLine}) => (
       <li inline-block mx-1>

@@ -18,5 +18,9 @@ export const SOCIALS = [
   {
     name: 'X',
     url: 'https://x.com/albert_faulbert',
+  },
+  {
+    name: 'Instagram',
+    url: 'https://instagram.com/albert_faulheit',
   }
 ]
