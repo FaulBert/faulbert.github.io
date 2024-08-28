@@ -6,7 +6,7 @@ import { presetUno, presetAttributify } from 'unocss'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://nazhard.github.io',
+  site: 'https://faulbert.github.io',
   integrations: [
     icon(),
     mdx(),
